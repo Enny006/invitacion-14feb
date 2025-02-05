@@ -19,11 +19,45 @@
             display: inline-block;
         }
         h1 { color: #d63384; }
-        p { font-size: 18px; }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>💖 Invitación Especial 💖</h1>
-        <p
- 
+        <h1>💕 Invitación Especial 💕</h1>
+        <p>¿Quieres ser mi cita el 14 de febrero? 💖</p>
+        <div class="buttons">
+            <button class="yes" onclick="alert('¡Sabía que dirías que sí! ❤️ Nos vemos el 14 de febrero.')">Sí</button>
+            <button class="no" id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+        });
+    </script>
+</body>
+</html>
